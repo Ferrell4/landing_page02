@@ -1,0 +1,18 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Fira Sans';
+    border: 1px solid red;
+ }
+
+ .container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    padding-left: 128px;
+    padding-right: 128px;
+ }
