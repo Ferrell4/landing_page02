@@ -13,25 +13,14 @@
   /* border: 1px solid red; */
 }
 
-body {
-  /* height: 5000px; */
-}
-
 .container {
   max-width: 1600px;
   margin: 0 auto;
   padding-left: 128px;
   padding-right: 128px;
-  
+
   align-items: center;
   width: 100%;
-}
-
-@media(max-width:1024px){
-   .container{
-      padding-left: 64px;
-      padding-right: 64px;
-   }
 }
 
 section h2 {
@@ -39,7 +28,7 @@ section h2 {
   margin-bottom: 32px;
   text-transform: uppercase;
   font-size: 36px;
-  
+
   color: var(--dark);
 }
 
@@ -48,13 +37,13 @@ section h2 {
   appearance: none;
   border: none;
   outline: none;
-  background:none;
-  
+  background: none;
+
   display: inline-block;
   color: white;
   background-color: var(--pink);
   padding: 12px 16px;
-  
+
   border-radius: 8px;
   text-decoration: none;
   text-transform: uppercase;
@@ -62,6 +51,12 @@ section h2 {
 
   font-size: 20px;
   cursor: pointer;
+}
+
+.button:hover {
+  color: var(--dark);
+  border: 4px solid var(--dark);
+  transition: 0.4s;
 }
 
 img {
@@ -73,19 +68,20 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  
+
   width: 100%;
   z-index: 99;
 }
 
-header.is-scrolling{
-   background-color: var(--dark);
-   transition:0.8s;
+header.is-scrolling {
+  background-color: var(--dark);
+  opacity: 0.9;
+  transition: 0.8s;
 }
 
-header.is-scrolling.container{
-   padding-top: 16px;
-   padding-bottom: 16px;
+header.is-scrolling.container {
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 header .container {
@@ -106,15 +102,60 @@ header .container span {
   font-weight: 600;
 }
 
-nav {
+nav.navBar {
   display: grid;
   grid-gap: 16px;
   grid-template-columns: repeat(4, auto);
 }
-nav a {
+
+nav.navBar a {
   color: inherit;
   font-size: 20px;
   text-decoration: none;
+}
+
+nav.navBar a:hover {
+  background-color: var(--pink);
+  border: 3px solid var(--dark);
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.mobileContainer {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: none;
+
+  max-width: 786px;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  align-items: center;
+  width: 100%;
+}
+
+nav.mobileBar {
+  display: none;
+  grid-template-rows: repeat(4, 1fr);
+  text-align: center;
+}
+.mobileContainer h2 {
+  display: none;
+  text-align: center;
+}
+
+nav.mobileBar a {
+  color: inherit;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+nav.mobileBar a:hover {
+  background-color: var(--pink);
+  border: 3px solid var(--dark);
+  border-radius: 10px;
+  transition: 0.4s;
 }
 
 main section.banner {
@@ -122,11 +163,13 @@ main section.banner {
   position: relative;
   min-height: 100vh;
   display: flex;
-  
+
   align-items: center;
   background-image: url(../images/mandala.jpg);
   background-position: center;
   background-size: cover;
+
+  text-align: center;
 }
 
 main section.banner:after {
@@ -135,7 +178,7 @@ main section.banner:after {
   display: block;
   position: absolute;
   top: 0;
-  
+
   left: 0;
   right: 0;
   z-index: 0;
@@ -172,11 +215,11 @@ main .container h3 {
   padding-bottom: 64px;
 }
 
-
 .services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 16px;
+  text-align: center;
 }
 
 .services-grid .service {
@@ -233,7 +276,7 @@ main .container h3 {
   padding: 16px;
   background-color: rgba(64, 39, 68, 0.8);
   color: #fff;
-  
+
   transition: 0.4s;
 }
 
@@ -247,127 +290,141 @@ main .container h3 {
   margin-bottom: 16px;
 }
 
-.projects .projects-grid .project .content:hover{
-   opacity: 1;
-} 
-
-.projects .center{
-   text-align: center;
+.projects .projects-grid .project .content:hover {
+  opacity: 1;
+  text-align: center;
 }
 
-.contact{
-   background-color: var(--primary)
+.projects .center {
+  text-align: center;
 }
 
-.contact .container{
-   padding-top: 64px;
-   padding-bottom: 64px;
-
+.contact {
+  background-color: var(--primary);
 }
 
-.contact .container h2{
-   color:white;
+.contact .container {
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 
-.contact .container form{
-   display: block;
-   margin: 0 auto;
-   max-width: 680px;
+.contact .container h2 {
+  color: white;
 }
 
-.contact .container form .form-grid{
-   display: grid;
-   grid-gap: 16px;
-   grid-template-columns: repeat(2,1fr);
-   margin-bottom: 16px;
+.contact .container form {
+  display: block;
+  margin: 0 auto;
+  max-width: 680px;
 }
 
-.contact .container form .form-grid .form-element{
-   /* this will remove the css from browser */
-   appearance: none;
-   border: none;
-   outline: none;
-   background: none;
-   
-   display: block;
-   width: 100%;
-   background-color:white;
-   border-radius: 8px;
-
-   padding: 16px;
-   font-size: 20px;
-   color: var(--dark)
+.contact .container form .form-grid {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 16px;
 }
 
-.contact .container form .form-grid .form-element::placeholder{
-   color:#aaa;
+.contact .container form .form-grid .form-element {
+  /* this will remove the css from browser */
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+
+  display: block;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+
+  padding: 16px;
+  font-size: 20px;
+  color: var(--dark);
+}
+
+.contact .container form .form-grid .form-element::placeholder {
+  color: #aaa;
 }
 
 /* this makes sure that the text covers the length of the grids above it */
-.contact .container form .form-grid .form-area{
-   grid-column: 1/-1;
-   border-radius: 8px;
-   border: none;
-   outline: none;
-   padding-left: 16px;
-   padding-top: 16px;
-   font-size: 20px;
+.contact .container form .form-grid .form-area {
+  grid-column: 1/-1;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  padding-left: 16px;
+  padding-top: 16px;
+  font-size: 20px;
 }
 
-.contact .container form .form-grid .form-area::placeholder{
-   color:#aaa;
+.contact .container form .form-grid .form-area::placeholder {
+  color: #aaa;
 }
-
 
 .contact .container .right-align {
-   text-align: right;
+  text-align: center;
 }
 
-@media(max-width:1024px){
-   .container{
-      padding-left: 64px;
-      padding-right: 64px;
-   }
-   .services .container .services-grid{
-      grid-template-columns: repeat(2, 1fr);
-   }
-   .projects .projects-grid .project .content p{
-      font-size: 16px;
-   }
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
 
-
+  .services .container .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects .projects-grid .project .content p {
+    font-size: 16px;
+  }
 }
 
-@media(max-width:768px){
-   .projects .projects-grid{
-      grid-template-columns: repeat(1, 1fr);
-   }
-   nav{
-      display: none;
-   }
-   main .container h1{
-      font-size: 36px;
-   }
-   .hide-mob{
-      display: none;
-   }
-   main .container h3{
-      font-size: 20px;
-   }
-   .container{
-      padding-left: 32px;
-      padding-right: 32px;
-   }
-   .button{
-      font-size: 18px;
-   }
-   .services .container .services-grid{
-      grid-template-columns: repeat(1, 1fr);
-   }
-   .contact .container form .form-grid{
-      grid-template-columns: repeat(1, 1fr);
-   }
-   .contact .container .right-align{
-      text-align: center;
-   }
+@media (max-width: 768px) {
+  .projects .projects-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  nav.navBar {
+    display: none;
+  }
+
+  nav.mobileBar {
+    display: grid;
+  }
+  main .container h1 {
+    font-size: 36px;
+  }
+  .hide-mob {
+    display: none;
+  }
+  main .container h3 {
+    font-size: 20px;
+  }
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+    text-align: center;
+  }
+
+  header .container {
+    display: none;
+  }
+  .mobileContainer {
+    display: block;
+  }
+
+  .mobileContainer h2 {
+    display: block;
+  }
+  .button {
+    font-size: 18px;
+  }
+  .services .container .services-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contact .container form .form-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contact .container .right-align {
+    text-align: center;
+  }
 }
