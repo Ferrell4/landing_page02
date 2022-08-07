@@ -30,6 +30,9 @@ section h2 {
   font-size: 36px;
 
   color: var(--dark);
+  background-color: var(--pink);
+  border-radius: 8px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .button {
@@ -51,6 +54,8 @@ section h2 {
 
   font-size: 20px;
   cursor: pointer;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+
 }
 
 .button:hover {
@@ -99,7 +104,7 @@ header .container h2 {
 }
 
 header .container span {
-  font-weight: 600;
+  font-weight: 900;
 }
 
 nav.navBar {
@@ -198,6 +203,7 @@ main .container h1 {
 
 main .container h1 span {
   color: var(--pink);
+  text-shadow: 0px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 main .container h3 {
@@ -227,7 +233,7 @@ main .container h3 {
   border-radius: 16px;
   /* alows for the border radius to display at the top, where images were sticking out*/
   overflow: hidden;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .services-grid .service .img-box {
@@ -247,6 +253,10 @@ main .container h3 {
   padding: 16px;
 }
 
+.services-grid .service .content ul li{
+   list-style: none;
+}
+
 .projects {
   padding-top: 64px;
   padding-bottom: 64px;
@@ -264,6 +274,8 @@ main .container h3 {
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 16px;
+
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
 }
 /* I can use this to change the photos in side the grid */
 /* I will have to modify the grid-template to add more */
@@ -309,7 +321,7 @@ main .container h3 {
 }
 
 .contact .container h2 {
-  color: white;
+  color: var(--dark);
 }
 
 .contact .container form {
@@ -340,6 +352,7 @@ main .container h3 {
   padding: 16px;
   font-size: 20px;
   color: var(--dark);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .contact .container form .form-grid .form-element::placeholder {
@@ -352,9 +365,11 @@ main .container h3 {
   border-radius: 8px;
   border: none;
   outline: none;
+  
   padding-left: 16px;
   padding-top: 16px;
   font-size: 20px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .contact .container form .form-grid .form-area::placeholder {
@@ -363,6 +378,11 @@ main .container h3 {
 
 .contact .container .right-align {
   text-align: center;
+}
+
+.footBox{
+   background-color: var(--primary);
+   text-align: center;
 }
 
 @media (max-width: 1024px) {
