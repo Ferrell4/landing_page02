@@ -23,6 +23,7 @@ body {
   padding-left: 128px;
   padding-right: 128px;
   
+  align-items: center;
   width: 100%;
 }
 
@@ -79,6 +80,7 @@ header {
 
 header.is-scrolling{
    background-color: var(--dark);
+   transition:0.8s;
 }
 
 header.is-scrolling.container{
