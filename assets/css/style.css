@@ -55,7 +55,6 @@ section h2 {
   font-size: 20px;
   cursor: pointer;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
-
 }
 
 .button:hover {
@@ -253,8 +252,8 @@ main .container h3 {
   padding: 16px;
 }
 
-.services-grid .service .content ul li{
-   list-style: none;
+.services-grid .service .content ul li {
+  list-style: none;
 }
 
 .projects {
@@ -324,6 +323,39 @@ main .container h3 {
   color: var(--dark);
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+  text-align: center;
+
+  margin-bottom: 16px;
+}
+
+/* .contact-grid .img {
+  background-color: white;
+  border-radius: 16px;
+   alows for the border radius to display at the top, where images were sticking out
+  overflow: hidden;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+} */
+
+/* .contact-grid .link .img-box {
+  display: block;
+  width: 100%;
+  display: none;
+}
+.contact-grid .link .img-box .img {
+  display: block;
+  width: 100%;
+  height: 128px;
+  /* treats img as a div with a background, in this case protects againts object overflow */
+  /* object-fit: cover; */
+
+.contact-grid .link .content {
+  padding: 16px;
+}
+
 .contact .container form {
   display: block;
   margin: 0 auto;
@@ -365,7 +397,7 @@ main .container h3 {
   border-radius: 8px;
   border: none;
   outline: none;
-  
+
   padding-left: 16px;
   padding-top: 16px;
   font-size: 20px;
@@ -380,9 +412,12 @@ main .container h3 {
   text-align: center;
 }
 
-.footBox{
-   background-color: var(--primary);
-   text-align: center;
+.footBox {
+  background-color: var(--primary);
+  text-align: center;
+  border-top: 5px solid var(--dark);
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 @media (max-width: 1024px) {
@@ -397,6 +432,12 @@ main .container h3 {
   .projects .projects-grid .project .content p {
     font-size: 16px;
   }
+  .contact-grid{
+   grid-template-columns: repeat(1, 1fr);
+  }
+  .projects .projects-grid {
+   grid-template-columns: repeat(2, 1fr);
+ }
 }
 
 @media (max-width: 768px) {
@@ -437,6 +478,9 @@ main .container h3 {
   }
   .button {
     font-size: 18px;
+  }
+  .contact-grid{
+   grid-template-columns: repeat(1, 1fr);
   }
   .services .container .services-grid {
     grid-template-columns: repeat(1, 1fr);
