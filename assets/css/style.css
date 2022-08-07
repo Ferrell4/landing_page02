@@ -22,7 +22,15 @@ body {
   margin: 0 auto;
   padding-left: 128px;
   padding-right: 128px;
+  
   width: 100%;
+}
+
+@media(max-width:1024px){
+   .container{
+      padding-left: 64px;
+      padding-right: 64px;
+   }
 }
 
 section h2 {
@@ -30,18 +38,29 @@ section h2 {
   margin-bottom: 32px;
   text-transform: uppercase;
   font-size: 36px;
+  
   color: var(--dark);
 }
 
 .button {
+  /* this will remove browser css */
+  appearance: none;
+  border: none;
+  outline: none;
+  background:none;
+  
   display: inline-block;
   color: white;
   background-color: var(--pink);
   padding: 12px 16px;
+  
   border-radius: 8px;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
+
+  font-size: 20px;
+  cursor: pointer;
 }
 
 img {
@@ -53,9 +72,20 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  
   width: 100%;
   z-index: 99;
 }
+
+header.is-scrolling{
+   background-color: var(--dark);
+}
+
+header.is-scrolling.container{
+   padding-top: 16px;
+   padding-bottom: 16px;
+}
+
 header .container {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -90,8 +120,8 @@ main section.banner {
   position: relative;
   min-height: 100vh;
   display: flex;
+  
   align-items: center;
-
   background-image: url(../images/mandala.jpg);
   background-position: center;
   background-size: cover;
@@ -103,6 +133,7 @@ main section.banner:after {
   display: block;
   position: absolute;
   top: 0;
+  
   left: 0;
   right: 0;
   z-index: 0;
@@ -200,6 +231,7 @@ main .container h3 {
   padding: 16px;
   background-color: rgba(64, 39, 68, 0.8);
   color: #fff;
+  
   transition: 0.4s;
 }
 
@@ -245,6 +277,7 @@ main .container h3 {
    display: grid;
    grid-gap: 16px;
    grid-template-columns: repeat(2,1fr);
+   margin-bottom: 16px;
 }
 
 .contact .container form .form-grid .form-element{
@@ -257,11 +290,82 @@ main .container h3 {
    display: block;
    width: 100%;
    background-color:white;
-   
+   border-radius: 8px;
+
+   padding: 16px;
+   font-size: 20px;
+   color: var(--dark)
+}
+
+.contact .container form .form-grid .form-element::placeholder{
+   color:#aaa;
 }
 
 /* this makes sure that the text covers the length of the grids above it */
 .contact .container form .form-grid .form-area{
    grid-column: 1/-1;
+   border-radius: 8px;
+   border: none;
+   outline: none;
+   padding-left: 16px;
+   padding-top: 16px;
+   font-size: 20px;
 }
 
+.contact .container form .form-grid .form-area::placeholder{
+   color:#aaa;
+}
+
+
+.contact .container .right-align {
+   text-align: right;
+}
+
+@media(max-width:1024px){
+   .container{
+      padding-left: 64px;
+      padding-right: 64px;
+   }
+   .services .container .services-grid{
+      grid-template-columns: repeat(2, 1fr);
+   }
+   .projects .projects-grid .project .content p{
+      font-size: 16px;
+   }
+
+
+}
+
+@media(max-width:768px){
+   .projects .projects-grid{
+      grid-template-columns: repeat(1, 1fr);
+   }
+   nav{
+      display: none;
+   }
+   main .container h1{
+      font-size: 36px;
+   }
+   .hide-mob{
+      display: none;
+   }
+   main .container h3{
+      font-size: 20px;
+   }
+   .container{
+      padding-left: 32px;
+      padding-right: 32px;
+   }
+   .button{
+      font-size: 18px;
+   }
+   .services .container .services-grid{
+      grid-template-columns: repeat(1, 1fr);
+   }
+   .contact .container form .form-grid{
+      grid-template-columns: repeat(1, 1fr);
+   }
+   .contact .container .right-align{
+      text-align: center;
+   }
+}
