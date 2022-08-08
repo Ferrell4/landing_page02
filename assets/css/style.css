@@ -13,6 +13,15 @@
   /* border: 1px solid red; */
 }
 
+body{
+  align-items: center;
+  background-image: url(../images/mandala.jpg);
+  background-position: fixed;
+  background-size: cover;
+
+  background-attachment: fixed;
+}
+
 .container {
   max-width: 1600px;
   margin: 0 auto;
@@ -168,12 +177,10 @@ main section.banner {
   min-height: 100vh;
   display: flex;
 
-  align-items: center;
-  background-image: url(../images/mandala.jpg);
-  background-position: center;
-  background-size: cover;
 
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 main section.banner:after {
@@ -212,7 +219,9 @@ main .container h3 {
 }
 
 .services {
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
+  background: none;
+  background-color: none;
 }
 
 .services .container {
@@ -261,6 +270,10 @@ main .container h3 {
   padding-bottom: 64px;
 }
 
+.projects .center {
+  text-align: center;
+}
+
 .projects .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -269,26 +282,30 @@ main .container h3 {
 }
 
 .projects .projects-grid .project {
-  background-image: url("../images/service-1.jpg");
+  background-color: white;
   border-radius: 16px;
+  /* alows for the border radius to display at the top, where images were sticking out*/
   overflow: hidden;
-  margin-bottom: 16px;
-
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
 }
-/* I can use this to change the photos in side the grid */
-/* I will have to modify the grid-template to add more */
-/* .projects .projects-grid .project:nth-child(2){
-   background-image: url('../images/service-2.jpg');
-} */
+
+.projects .projects-grid .project .img-box {
+  display: block;
+  width: 100%;
+}
+.projects .projects-grid .project .img-box .img {
+  display: block;
+  width: 100%;
+  height: 50vh;
+}
 
 .projects .projects-grid .project .content {
-  opacity: 0;
   padding: 16px;
-  background-color: rgba(64, 39, 68, 0.8);
+  background-color: var(--primary);
   color: #fff;
 
   transition: 0.4s;
+  text-align: center;
 }
 
 .projects .projects-grid .project .content h3 {
@@ -299,15 +316,6 @@ main .container h3 {
 .projects .projects-grid .project .content p {
   font-size: 16px;
   margin-bottom: 16px;
-}
-
-.projects .projects-grid .project .content:hover {
-  opacity: 1;
-  text-align: center;
-}
-
-.projects .center {
-  text-align: center;
 }
 
 .contact {
@@ -331,26 +339,6 @@ main .container h3 {
 
   margin-bottom: 16px;
 }
-
-/* .contact-grid .img {
-  background-color: white;
-  border-radius: 16px;
-   alows for the border radius to display at the top, where images were sticking out
-  overflow: hidden;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
-} */
-
-/* .contact-grid .link .img-box {
-  display: block;
-  width: 100%;
-  display: none;
-}
-.contact-grid .link .img-box .img {
-  display: block;
-  width: 100%;
-  height: 128px;
-  /* treats img as a div with a background, in this case protects againts object overflow */
-  /* object-fit: cover; */
 
 .contact-grid .link .content {
   padding: 16px;
@@ -413,10 +401,12 @@ main .container h3 {
 }
 
 .footBox {
-  background-color: var(--primary);
+  background-color: var(--dark);
   text-align: center;
   border-top: 5px solid var(--dark);
   padding-top: 16px;
+  
+  color: white;
   padding-bottom: 16px;
 }
 
