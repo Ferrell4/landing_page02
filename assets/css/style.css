@@ -456,6 +456,8 @@ main .container h3 {
 
 .contact .container .align {
   text-align: center;
+  align-items: center;
+  align-content: center;
 }
 
 .footBox {
